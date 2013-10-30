@@ -12,3 +12,10 @@ do
 	echo "=> Tunneling localhost:${LOCAL_PORT[$i]} to ${REMOTE_USER[$i]}@${HOST[$i]}:${REMOTE_PORT[$i]}"
 	autossh -M 0 -q -N -f -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -o "StrictHostKeyChecking no" -L ${LOCAL_PORT[$i]}:localhost:${REMOTE_PORT[$i]} ${REMOTE_USER[$i]}@${HOST[$i]}
 done
+
+for job in `jobs -p`
+do
+	wait $job
+done
+
+echo "=> Exiting"
