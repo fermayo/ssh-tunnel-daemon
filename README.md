@@ -33,3 +33,5 @@ Opens two tunnels:
 => Tunneling localhost:6000 to user1@remotehost1:5555
 => Tunneling localhost:6001 to user2@remotehost2:5555
 ```
+
+Remember that the user executing the `ssh-tunnel-daemon.sh` must be able to connect via SSH to the remote host using the specified remote user without interactive password prompt (i.e. using certificates)!
