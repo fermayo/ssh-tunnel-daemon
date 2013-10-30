@@ -1,4 +1,4 @@
-# Connect to HOST[X]:REMOTE_PORT[X] to localhost:LOCAL_PORT[X] using REMOTE_USER[X]
+# Connect to HOST[X]:REMOTE_PORT[X] from localhost:LOCAL_PORT[X] using REMOTE_USER[X]
 i=0
 HOST[$i]="remotehost1"
 REMOTE_PORT[$i]=5555
